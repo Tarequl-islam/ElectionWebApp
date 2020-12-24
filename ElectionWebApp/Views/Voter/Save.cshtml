@@ -1,0 +1,51 @@
+﻿@model ElectionWebApp.Models.Voter
+@{
+    ViewBag.Title = "Voter Entry";
+}
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "signupForm" }))
+{
+    <div align="center" class="container">
+    <fieldset style="width: 60%">
+        <br/>
+        <legend>Voter Entry</legend>
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(x => x.Name)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.Name)
+                    @Html.ValidationMessageFor(x => x.Name)
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(x => x.VoterId)
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.VoterId)
+                    @Html.ValidationMessageFor(x => x.VoterId)
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit"/>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    </div> 
+}
+
+    @if (ViewBag.Message != null)
+    {
+        <h3>@ViewBag.Message</h3>
+    }
+    
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<br />

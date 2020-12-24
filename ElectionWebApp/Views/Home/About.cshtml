@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<div class="jumbotron">
+    <h1>Online Voting System</h1>
+    <p class="lead">This is an online voting system created by Tarequl islam and Rahatul Alam</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Add Voter</h2>
+        <p>
+            You can add voter by clicking this button. you have to Enter a name and a voterNID
+        </p>
+        <p><a class="btn btn-default" href="/Voter/Save">Go to Add &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Add Candidate</h2>
+        <p>
+            You can add Candidate by clicking this button. You have to Enter Candidate name and a Symbol
+        </p>
+        <p><a class="btn btn-default" href="/Candidate/Save">Go to Add &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Cast Vote</h2>
+        <p>
+            You can Cast Vote by clicking this button. You have to Enter your VoterNID and Select a Symbol you choose
+        </p>
+        <p>
+            <a class="btn btn-default" href="/CastVote/Cast">Go to Cast &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>View Vote Result</h2>
+        <p>
+            You can see Vote result by clicking this button.
+        </p>
+        <p>
+            <a class="btn btn-default" href="/Candidate/Result">Go to See &raquo;</a>
+        </p>
+    </div>
+</div>

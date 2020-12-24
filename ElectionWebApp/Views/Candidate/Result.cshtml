@@ -1,0 +1,43 @@
+﻿@using ElectionWebApp.Models
+@model List<ElectionWebApp.Models.Candidate>
+@{
+    ViewBag.Title = "Vote Result";
+    List<Candidate> candidateList = Model;
+    int i = 0;
+}
+   <div align="center" class="container">
+        <fieldset style="width: 60%">
+            <legend>See Vote Result</legend>
+
+            <table class="display" style="width: 50%" id="example">
+                <tr>
+                    <th>Position</th>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Vote</th>
+                </tr>
+                @foreach (Candidate candidate in candidateList)
+                {
+                    i++;
+                    <tr>
+                        <td>@i</td>
+                        <td>@candidate.Name</td>
+                        <td>@candidate.Symbol</td>
+                        <td>@candidate.Vote</td>
+                    </tr>
+                }
+            </table>
+        </fieldset>
+    </div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+</script>
+
+<br />
